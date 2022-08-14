@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackathon/data/data.dart';
 import 'package:hackathon/entry/entry.dart';
-import 'package:hackathon/entry/entry_imgs.dart';
+import 'package:hackathon/home/videoList.dart';
+import 'package:hackathon/model/entry_imgs_model.dart';
 import 'package:hackathon/home/carousel.dart';
 import 'package:hackathon/home/optionsLayer.dart';
 
@@ -71,7 +72,8 @@ class _HomePageState extends State<HomePage> {
               color: Color.fromRGBO(252, 74, 74, 1)),),
               Text("Ählisi",style: TextStyle(fontWeight: FontWeight.w700,fontSize:12, ),),
             ],),
-          )
+          ),
+          VideoList(),
         ],
       ),
     );

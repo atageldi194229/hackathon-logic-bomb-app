@@ -23,7 +23,7 @@ class _CarousellState extends State<Carousell> {
     return Container(
       margin: EdgeInsets.only(top: 25,bottom: 25),
       child: CarouselSlider.builder(
-        itemCount: 3,
+        itemCount: carouselImag.length,
         options: CarouselOptions(
           viewportFraction: 1,
           aspectRatio: 1,

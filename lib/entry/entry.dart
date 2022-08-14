@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hackathon/entry/entry_imgs.dart';
+import 'package:hackathon/model/entry_imgs_model.dart';
 
 import '../data/data.dart';
 
@@ -14,7 +14,7 @@ class Entry extends StatefulWidget {
 
 class _EntryState extends State<Entry> {
 
-  List<ImagesModel> imgs = [];
+  List<VideoListModel> imgs = [];
 
   void initState() {
     imgs = getImages();
@@ -25,9 +25,9 @@ class _EntryState extends State<Entry> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
-        itemCount: 3,
+        itemCount: imgs.length,
         itemBuilder: (contex,index)=>
-          Images(title: imgs[index].letter, imgUrl:imgs[index].imgUrl ,),),
+          Images(title: imgs[index].videoName, imgUrl:imgs[index].imgUrl ,),),
     );
   }
 }
